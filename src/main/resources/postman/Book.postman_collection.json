@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "efc3989c-133e-403d-a5d2-9a20996619b4",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40123929"
+	},
+	"item": [
+		{
+			"name": "create book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Harry Potter\",\r\n  \"genre\": \"Fantasy\",\r\n  \"year2\": \"2001\",\r\n  \"description\": \"lalala\",\r\n  \"autorId\": \"c0c75a86-11e4-4816-9c2a-d65547fddee7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/e94977d0-f7ca-436b-93b2-d2927bb31cd0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"e94977d0-f7ca-436b-93b2-d2927bb31cd0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Harry Potter\",\r\n  \"genre\": \"Fantasy\",\r\n  \"year2\": \"2001\",\r\n  \"description\": \"lalala\",\r\n  \"autorId\": \"7e3cb73a-ae33-45b5-92fb-788dbd5c4550\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"35dd506e-e943-4bb1-a425-67fe9327caf1\",\r\n  \"name\": \"Harry efefe\",\r\n  \"genre\": \"Fantasy\",\r\n  \"year2\": \"2001\",\r\n  \"description\": \"lalala\",\r\n  \"autorId\": \"99afafb7-7ac3-4d11-ae2f-a6a8a003c210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/35dd506e-e943-4bb1-a425-67fe9327caf1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"35dd506e-e943-4bb1-a425-67fe9327caf1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

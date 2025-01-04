@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "ad1480cb-5c03-454d-835a-01615cee5a30",
+		"name": "Rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40123929"
+	},
+	"item": [
+		{
+			"name": "create rental",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": \"c541d64f-b10f-40e5-bd8d-a3ac67ddaac6\",\r\n  \"rentalDate\": \"2024-12-30\",\r\n  \"rentalTo\": \"2024-12-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/rental/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rental",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get rental",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": \"e94977d0-f7ca-436b-93b2-d2927bb31cd0\",\r\n  \"rentalDate\": \"2024-12-30\",\r\n  \"rentalTo\": \"2024-12-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/rental/e127ba7c-c6ad-47be-9c36-142c902715b5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rental",
+						"e127ba7c-c6ad-47be-9c36-142c902715b5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete rental",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": \"e94977d0-f7ca-436b-93b2-d2927bb31cd0\",\r\n  \"rentalDate\": \"2024-12-30\",\r\n  \"rentalTo\": \"2024-12-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/rental/d1220c0c-0de6-4ff7-acd6-75c6bfbc98e5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rental",
+						"d1220c0c-0de6-4ff7-acd6-75c6bfbc98e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update rental",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"e127ba7c-c6ad-47be-9c36-142c902715b5\",\r\n    \"rentalDate\": \"2024-12-01\",\r\n    \"rentalTo\": \"2024-12-30\",\r\n    \"bookId\": \"c541d64f-b10f-40e5-bd8d-a3ac67ddaac6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/rental/e127ba7c-c6ad-47be-9c36-142c902715b5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"rental",
+						"e127ba7c-c6ad-47be-9c36-142c902715b5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

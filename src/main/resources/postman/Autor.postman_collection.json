@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "e313d6e2-fd46-4c22-88dd-fa49a193a914",
+		"name": "Autor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40123929"
+	},
+	"item": [
+		{
+			"name": "create autor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"imie\": \"Jan\",\r\n  \"nazwisko\": \"Kowalski\",\r\n  \"narodowosc\": \"Polska\",\r\n  \"dataUrodzenia\": \"1950-12-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/autor/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"autor",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get autor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/autor/fc7a1dad-5da5-4fac-afb4-6974699131e8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"autor",
+						"fc7a1dad-5da5-4fac-afb4-6974699131e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete autor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/autor/b25ade78-0bcc-4e62-9ff8-e44b15865494",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"autor",
+						"b25ade78-0bcc-4e62-9ff8-e44b15865494"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update autor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token z logina>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"a2d48d05-b793-4fc8-8bfb-76b1ef4521df\",\r\n    \"imie\": \"Janek\",\r\n    \"nazwisko\": \"Kowalski\",\r\n    \"dataUrodzenia\": \"1950-12-31\",\r\n    \"narodowosc\": \"Polska\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/autor/a2d48d05-b793-4fc8-8bfb-76b1ef4521df",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"autor",
+						"a2d48d05-b793-4fc8-8bfb-76b1ef4521df"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
