@@ -25,11 +25,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()) // Wyłączenie CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/libraryUser/login", "/api/libraryUser/register").permitAll() // Endpoint logowania dostępny dla wszystkich
+                        .requestMatchers("/api/libraryUser/login", "/api/libraryUser/register", "/h2-console/**").permitAll() // Endpoint logowania dostępny dla wszystkich
                         .anyRequest().authenticated() // Wszystkie inne wymagają autoryzacji
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Bezstanowe sesje
+                ).headers(headers -> headers
+                        .frameOptions(frameOptions -> frameOptions.disable()) // Zezwolenie na iframe (potrzebne dla H2 Console)
                 );
 
         // Dodanie filtra JWT
@@ -38,3 +40,5 @@ public class SecurityConfig {
         return http.build();
     }
 }
+
+
